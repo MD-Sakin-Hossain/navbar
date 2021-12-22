@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+header{
+    position: fixed;
+    background-color: rgb(39, 39, 39);
+    padding: 20px;
+    width: 100%;
+    height: 50px;
+}
+
+.left_area h3{
+    color: rgb(255, 255, 255);
+    margin: 0;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-left: 50px;
+}
+
+.left_area span{
+    color: aqua;
+}
+
+.logout{
+    text-decoration: none;
+    padding: 5px;
+    background: aqua;
+    float: right;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: -39px;
+    color: white;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.logout:hover{
+    background: rgb(17, 197, 197);
+}
+
+.slidebar{
+    background: rgb(65, 65, 65);
+    margin-top: 50px;
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+}
+
+.slidebar .profile_image{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 100%;
+}
+
+.slidebar h4{
+    color: rgb(216, 216, 216);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.slidebar a{
+    color: white;
+    display: block;
+    line-height: 60px;
+    width: 100%;
+    text-decoration: none;
+    padding-left: 50px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.slidebar a:hover{
+    background: rgb(5, 192, 183);
+}
+
+.slidebar i{
+    padding-right: 10px;
+}
+
+label #menu_btn{
+    color: white;
+    z-index: 1;
+    position: fixed;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 30px;
+    margin-left: 10px;
+}
+#check{
+    display: none;
+}
+
+#check:checked ~ .slidebar{
+    left: -190px;
+    transition: 0.3s;
+}
+
+#check:checked ~ .slidebar a span{
+    display: none;
+}
+
+#check:checked ~ .slidebar a{
+    font-size: 20px;
+    margin-left: 160px;
+    width: 90px;
+}
+
+#check:checked ~ .slidebar a:hover{
+    width: 90px;
+}
+
+
+@media(max-width: 574px){
+    .left_area h3{
+    align-items: center;
+    display: inline;
+    font-size: 1.17em;
+    }
+    .logout{
+        font-size: 10px;
+        margin-top: -30px;
+    }
+    label #menu_btn{
+        margin-top: 10px;
+    }
+}
